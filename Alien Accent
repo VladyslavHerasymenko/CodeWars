@@ -1,0 +1,12 @@
+def convert(st):
+    stu = ""
+    i = 0
+    while i < len(st):
+        if st[i] == "a":
+            stu = stu + "o"
+        elif st[i] == "o":
+            stu = stu + "u"
+        else:
+            stu = stu + st[i]
+        i = i + 1
+    return stu
