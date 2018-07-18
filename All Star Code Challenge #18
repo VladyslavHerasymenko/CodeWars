@@ -1,0 +1,2 @@
+def str_count(strng, letter):
+    return sum(1 for letter in strng)
