@@ -4,5 +4,5 @@ def nth_fib(n):
         return list[n-1]
     while n > 2:
         list.append(list[-2] + list[-1])
-        n = n - 1
+        n -= 1
     return list[-1]
