@@ -2,8 +2,7 @@ def nth_fib(n):
     list = [0, 1]
     if n < 3:
         return list[n-1]
-    else:
-        while n > 2:
-            list.append(list[-2] + list[-1])
-            n = n - 1
-        return list[-1]
+    while n > 2:
+        list.append(list[-2] + list[-1])
+        n = n - 1
+    return list[-1]
