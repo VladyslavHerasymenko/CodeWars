@@ -1,0 +1,11 @@
+def what_list_am_i_on(actions):
+    naughty = 0 
+    nice = 0
+    for action in actions:
+        if action[0] in "bfk":
+            naughty += 1
+        elif action[0] in "gsn":
+            nice += 1
+    if nice > naughty:
+        return "nice"
+    return "naughty"
