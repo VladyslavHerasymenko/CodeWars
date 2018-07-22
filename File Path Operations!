@@ -1,0 +1,9 @@
+class FileMaster():
+    def __init__(self, filepath):
+        self.path = filepath
+    def extension(self):
+        return self.path[self.path.find(".") + 1:]
+    def filename(self):
+        return self.path[self.path.rfind("/") + 1:self.path.find(".")]
+    def dirpath(self):
+        return self.path[:self.path.rfind("/") + 1]
