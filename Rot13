@@ -1,0 +1,12 @@
+import string
+
+def rot13(message):
+    rot13_message = ""
+    letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    rot13_letter = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"
+    for i in range(len(message)):
+        if message[i] in letter:
+            rot13_message += rot13_letter[letter.index(message[i])]
+        else:
+            rot13_message += message[i]
+    return rot13_message
