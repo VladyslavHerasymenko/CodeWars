@@ -1,0 +1,8 @@
+def box(n):
+    box = []
+    for i in range(n):
+        if i == 0 or i == n - 1:
+            box.append("-" * n)
+        else:
+            box.append("-" + " " * (n - 2) + "-")
+    return box
