@@ -1,0 +1,11 @@
+class Grid():
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        self.grid_list = ["0" * self.width for i in range(self.height)]
+        self.grid = "\n".join(self.grid_list)
+    def plot_point(self, x, y):
+        self.grid_list[y - 1] = "0" * (x - 1) + "X" + "0" * (self.width - x)
+        self.grid = "\n".join(self.grid_list)
+    def __repr__(self):
+        pass
