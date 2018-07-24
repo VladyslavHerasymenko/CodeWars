@@ -1,0 +1,9 @@
+def solve(arr):
+    result = []
+    set_str = ["".join(sorted(set(elem))) for elem in arr]
+    set_list = set(set_str)
+    print(set_list)
+    for elem in set_list:
+        if set_str.count(elem) > 1:
+            result.append(sum([i for i in range(len(set_str)) if elem == set_str[i]]))
+    return sorted(result)
