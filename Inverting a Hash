@@ -1,0 +1,5 @@
+def invert_hash(dictionary):
+    invert_dict = {}
+    for key in dictionary:
+        invert_dict[dictionary[key]] = key
+    return invert_dict
