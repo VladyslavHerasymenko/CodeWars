@@ -1,0 +1,7 @@
+def number_of_pairs(gloves):
+    num_of_pairs = 0
+    unique_colors = set(gloves)
+    for color in unique_colors:
+        if gloves.count(color) > 1:
+            num_of_pairs += int(gloves.count(color) / 2)
+    return num_of_pairs
