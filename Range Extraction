@@ -1,0 +1,28 @@
+def solution(args):
+    result = ""
+    range_len = 1
+    ranges = []
+    for i in range(len(args) - 1):
+        if args[i] == args[-2]:
+            if args[i] + 1 == args[i + 1]:
+                range_len += 1
+                ranges.append(range_len)
+            else:
+                ranges.append(range_len)
+                ranges.append(1)
+        elif args[i] + 1 != args[i + 1]:
+            ranges.append(range_len)
+            range_len = 1
+        else:
+            range_len += 1
+    for i in range(len(ranges)):
+        if ranges[i] == 1:
+            result += str(args[sum(ranges[:i])]) + ","
+        elif ranges[i] == 2:
+            result += str(args[sum(ranges[:i])]) + "," + str(args[sum(ranges[:i])] + 1) + ","
+        else:
+            result += str(args[sum(ranges[:i])]) + "-" + str(args[sum(ranges[:i])] + ranges[i] - 1) + ","
+    return result[:-1]  
+    
+        
+        
