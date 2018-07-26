@@ -1,0 +1,8 @@
+def longest_palindrome (s):
+    print(s)
+    lengths = []
+    for i in range(len(s)):
+        for j in range(i, len(s)):
+            if s[i:j] in s[j:i:-1]:
+                lengths.append(len(s[i:j]))
+    return max(lengths) if len(lengths) > 0 else 0
