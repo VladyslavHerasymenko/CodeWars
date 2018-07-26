@@ -1,0 +1,5 @@
+def sum_pairs(ints, s):
+    for i in range(1, len(ints) - 1):
+        for j in range(0, len(ints) - i):
+            if ints[j] + ints[j + i] == s:
+                return [ints[j], ints[j + i]]
