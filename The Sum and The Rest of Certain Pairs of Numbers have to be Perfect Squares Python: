@@ -1,0 +1,5 @@
+def closest_pair_tonum(upper_lim):
+    for m in range(upper_lim - 1, 0, -1):
+        for n in range(m - 1, 0, -1):
+            if (m + n) ** 0.5 % 1 == 0 and (m - n) ** 0.5 % 1 == 0:
+                return (m, n)
